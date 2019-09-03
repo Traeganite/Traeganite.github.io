@@ -49,11 +49,18 @@ sjs.open("target",500,400);
 	soundEffect.play();
 	sjs.bounceOff(ball,paddle); 
 });
-	//Score
+	//Score 1
 	var score = 0;
-	var score_txt = new sjs.Text("Score: 0", 21, "purple");
-	sjs.onHit("ball",["top_screen","bottom_screen"], function(){
-		window.location = "gameover.html"; 
+	var score_txt = new sjs.Text("Player 1: 0", 21, "purple");
+	sjs.onHit("ball",["top_screen"], function(){
+		window.location = "player1win.html"; 
+});
+	
+	//Score 2
+	var score = 0;
+	var score_txt = new sjs.Text("Player 2: 0", 21, "purple");
+	sjs.onHit("ball",["bottom_screen"], function(){
+		window.location = "player2win.html"; 
 });
 	
 } //end start 
